@@ -1,6 +1,6 @@
 <?php
-require('../include/header.php');
-include("../conexao/conexao.php");
+include('../include/header.php');
+include('../conexao/conexao.php');
 $id_produto = $_REQUEST['id_produto'];
 $sql = "select * from produto where id_produto=$id_produto";
 $resultado = mysqli_query($conexao, $sql);

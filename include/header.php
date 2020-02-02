@@ -11,7 +11,7 @@ $pasta= getcwd();
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>HomeShop</title>
-    <link rel="icon" href="imagem/favicon.ico">
+    <link rel="icon" href="../img/logo.jpeg">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
     <script defer src="../js/fontawesome-all.min.js"></script>
     <link rel="stylesheet" href="../css/fontawesome.min.css">
@@ -26,7 +26,6 @@ $pasta= getcwd();
             <span class="navbar-toggler-icon"></span>
         </a>
         <div class="topo">
-         
             Home Shop <p>O que você precisa em 24 horas!</p>
             </a>
         </div>
@@ -35,7 +34,7 @@ $pasta= getcwd();
             <ul class="navbar-nav ml-auto">                 
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle menu-header" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown">
-                        <img class="rounded-circle" src="../img/icon.png" width="20" height="20"> &nbsp;<span class="d-none d-sm-inline"></span>
+                    <img class="rounded-circle" src="../img/icon.png" width="20" height="20"> &nbsp;<span class="d-none d-sm-inline"></span>
                     </a>
                     <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
                         <a class="dropdown-item" href="#"><i class="fas fa-user"></i> Perfil</a>
@@ -63,14 +62,16 @@ $pasta= getcwd();
                         <li <?php echo ($menu == 'listar_cliente') ? 'class="active"' : null; ?>><a href="../view/cliente_listar.php"><i class="fas fa-users"></i> Listar </a></li>
                     </ul>
                 </li>
-                <li>
-                    <a href="#submenu2" data-toggle="collapse"><i class="fas fa-list-ul"></i> Produto</a>
+                <li><a href="#submenu2" data-toggle="collapse"><i class="fas fa-list-ul"></i> Produto</a>
                     <ul id="submenu2" class="list-unstyled collapse">
                         <li <?php echo ($menu == 'novo_produto') ? 'class="active"' : null; ?>><a href="../view/produto_cadastrar.php"><i class="fas fa-tags"></i> Novo</a></li>
                         <li <?php echo ($menu == 'listar_produto') ? 'class="active"' : null; ?>><a href="../view/produto_listar.php"><i class="fas fa-tags"></i> Listar</a></li>
                        <!-- <li><a href="#"><i class="far fa-list-alt"></i> Listar </a></li>-->
                     </ul>
-                </li>             
+                </li> 
+                <li><a href="../view/carrinho.php"><i class="fas fa-shopping-cart"></i> Carrinho</a></li> 
+                     
+                       
                 <li><a href="../logout.php"><i class="fas fa-sign-out-alt"></i> Sair</a></li>
             </ul>
         </nav>
