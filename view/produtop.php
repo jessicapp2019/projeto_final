@@ -11,7 +11,7 @@ $dados = mysqli_fetch_array($resultado);
   <br> 
    <div class="row">
   <div class="col-sm-6">
-    <img src="fotosprodutos/<?=$dados['imagem']; ?>" style="height:0 auto;width:80%;padding:10px;" alt="imagem" id="alignleft" class="img-responsivo">
+    <img src="../fotosprodutos/<?=$dados['imagem']; ?>" style="height:0 auto;width:80%;padding:10px;" alt="imagem" id="alignleft" class="img-responsivo">
   </div>
 <div class="col-sm-6">
     <h3><?= $dados['descricao']; ?></h3>

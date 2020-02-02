@@ -17,7 +17,7 @@ include("../conexao/conexao.php");
 
             <div class="card"   >
               <div class="card-body">
-                <img class="card-img-top" src="fotosprodutos/<?= $dados['imagem']; ?> "style="width:80%;" alt="Card image cap"> 
+                <img class="card-img-top" src="../fotosprodutos/<?= $dados['imagem']; ?> "style="width:80%;" alt="Card image cap"> 
                
                 <p id='cartoes' class="card-title"><b><?php echo $dados['descricao'] ?></b></p>
                   <p class="card-text"><strong><?php echo $dados['categoria'] ?></strong></p>

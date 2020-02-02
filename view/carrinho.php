@@ -9,18 +9,18 @@
         //ADICIONAR CARRINHO 
         if($_GET['acao'] == 'add'){ 
             $id_produto = intval($_GET['id_produto']); 
-            if(!isset($_SESSION['carrinho'][$produto])){ 
-                $_SESSION['carrinho'][$produto] = 1; 
+            if(!isset($_SESSION['carrinho'][$id_produto])){ 
+                $_SESSION['carrinho'][$id_produto] = 1; 
             } else { 
-                $_SESSION['carrinho'][$produto] += 1; 
+                $_SESSION['carrinho'][$id_produto] += 1; 
             } 
 		}
 		
 		//REMOVER
 		 if($_GET['acao'] == 'del'){ 
             $produto = intval($_GET['id_produto']); 
-            if(isset($_SESSION['carrinho'][$produto])){ 
-                unset($_SESSION['carrinho'][$produto]); 
+            if(isset($_SESSION['carrinho'][$id_produto])){ 
+                unset($_SESSION['carrinho'][$id_produto]); 
             } 
 		 }
 		
@@ -108,7 +108,7 @@
 					
                     include("../conexao/conexao.php");
 					$total = 0;
-					foreach($_SESSION['carrinho'] as $codproduto => $qtd){
+					foreach($_SESSION['carrinho'] as $id_produto => $qtd){
 						
 						$sql     = "SELECT * FROM produto WHERE id_produto = '$id_produto'";
 						$executa = mysqli_query($conexao, $sql) or die (mysqli_error());
